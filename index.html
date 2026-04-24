@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+  <title> 𓂃⋆.˚ miyukiss about me</title>
+  
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Inter:wght@300;400&family=Nunito:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Rules Popup Modal -->
+  <div class="rules-modal" id="rulesModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <i class="fas fa-heart"></i>
+        <h2>Before you view...</h2>
+        <i class="fas fa-heart"></i>
+      </div>
+      <div class="modal-body">
+        <p class="modal-greeting">｡𖦹°‧⭑.ᐟ Welcome to my profile۫ ꣑ৎ</p>
+        <div class="rules-list">
+          <div class="rule-item">
+            <i class="fas fa-heart"></i>
+            <span>Please consider reading my rules first before planning on interacting with me.</span>
+          </div>
+        </div>
+        <p class="modal-footer-text">Click okay or get hit by a bomb ♡ </p>
+      </div>
+      <button class="modal-ok-btn" id="modalOkBtn">
+        <i class="fas fa-check"></i> okay <i class="fas fa-check"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Top badge "made by miyukiss" -->
+  <div class="made-by-badge">
+    <span>✧ made by miyukiss ✧</span>
+  </div>
+
+  <!-- Navigation bar - Main -->
+  <nav class="navbar" id="mainNav">
+    <ul class="nav-menu">
+      <li class="nav-item"><a href="#" class="nav-link active" data-section="about">about</a></li>
+      <li class="nav-item"><a href="#" class="nav-link" data-section="gaming">games</a></li>
+      <li class="nav-item"><a href="#" class="nav-link" data-section="faves">faves</a></li>
+      <li class="nav-item"><a href="#" class="nav-link" data-section="rules">rules</a></li>
+      <li class="nav-item"><a href="#" class="nav-link" data-section="friends">friends</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main container -->
+  <main class="container">
+    
+    <!-- Profile Section (Hidden when games/rules/faves/friends are active) -->
+    <section id="profile" class="section-card profile-section profile-visible">
+      <!-- Cat Ears on Banner -->
+      <div class="cat-ears">
+        <div class="cat-ear left-ear"></div>
+        <div class="cat-ear right-ear"></div>
+      </div>
+      
+      <!-- Banner behind pfp -->
+      <div class="profile-banner">
+        <img src="https://i.pinimg.com/1200x/a0/2d/33/a02d33852b4b83f8ed75a4ebb1395860.jpg" alt="profile banner" class="banner-img" onerror="this.src='https://images.pexels.com/photos/1939485/pexels-photo-1939485.jpeg?auto=compress&cs=tinysrgb&w=600&h=150&fit=crop'">
+      </div>
+      
+      <div class="profile-pic-wrapper">
+        <div class="profile-pic">
+          <img src="https://i.pinimg.com/736x/a8/44/81/a84481086654010a6f1e9f12775b13dc.jpg" alt="miyuki profile" class="profile-img" onerror="this.src='https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop'">
+          <div class="profile-status idle" title="idle">
+            <i class="fas fa-moon"></i>
+          </div>
+        </div>
+      </div>
+      
+      <h1 class="name-title">miyuki <span class="soft-emoji">🌸</span></h1>
+      <p class="pronouns">she / her • 16 • Scorpio</p>
+      <div class="bio-box">
+        <p>
+          <i class="fas fa-feather-alt"></i> 
+          Certified dreamer, artist & coder.
+          I believe in kindness, late-night doodles, and making everyday peaceful and pink 
+        </p>
+      </div>
+      <div class="mini-status">
+        <span class="status-badge"><i class="fas fa-map-pin"></i>Philippines</span>
+        <span class="status-badge music-badge"><i class="fas fa-cloud"></i> currently: <span class="music-text">Listening to Chase Atlantic</span> <span class="music-notes">♪♫</span></span>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section-card content-section" data-section="about">
+      <div class="section-header-wrapper">
+        <h2 class="section-title"><span class="title-deco">﹒</span> about me <span class="title-deco">﹒</span></h2>
+        <div class="section-sticker about-sticker">
+          <img src="https://i.pinimg.com/736x/8c/76/3e/8c763e3596445fc4e2bd8b86c3ef9765.jpg" alt="sticker" onerror="this.src='https://images.pexels.com/photos/1939485/pexels-photo-1939485.jpeg?auto=compress&cs=tinysrgb&w=60&h=60&fit=crop'">
+        </div>
+      </div>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>Heyoo <i class="fas fa-star"></i> I'm Yuki! i've always been drawn to soft aesthetics like strawberry milk, and vintage lace. </p>
+          <p>by day I'm a absolute chud and a student. By night I'm journaling, or coding. </p>
+          <p><i class="fas fa-quote-right"></i> #Lifeisbetterwithsongandfriends.</p>
+        </div>
+        <div class="about-highlights">
+    </section>
+
+    <!-- Gaming section -->
+    <section id="gaming" class="section-card content-section" data-section="gaming">
+      <div class="section-header-wrapper">
+        <h2 class="section-title"><span class="title-deco">﹒</span> my games <span class="title-deco">﹒</span></h2>
+        <div class="section-sticker gaming-sticker">
+          <img src="https://i.pinimg.com/736x/cd/78/81/cd788179ad8321368efca27c7f4539e7.jpg" alt="sticker" onerror="this.src='https://images.pexels.com/photos/1939485/pexels-photo-1939485.jpeg?auto=compress&cs=tinysrgb&w=60&h=60&fit=crop'">
+        </div>
+      </div>
+      
+      <div class="games-showcase">
+        <!-- Game 1 -->
+        <div class="game-card">
+          <div class="game-img-wrapper">
+            <img src="https://i.pinimg.com/736x/03/e7/60/03e760b8e80b4abd6026a38b3dcdeb2f.jpg" alt="Genshin Impact" class="game-img" onerror="this.src='https://images.pexels.com/photos/1939485/pexels-photo-1939485.jpeg?auto=compress&cs=tinysrgb&w=200&h=200&fit=crop'">
+            <span class="game-status playing">playing</span>
+          </div>
+          <div class="game-info">
+            <h3 class="game-name">Genshin Impact</h3>
+            <p class="game-desc">AR 50 (1m exp CAPPED) • Hu Tao main </p>
+          </div>
+        </div>
+        
+        <!-- Game 2 -->
+        <div class="game-card">
+          <div class="game-img-wrapper">
+            <img src="https://i.pinimg.com/736x/91/00/49/910049f3b026069751c3088c67a90393.jpg" alt="Honkai Star Rail" class="game-img" onerror="this.src='https://images.pexels.com/photos/1939485/pexels-photo-1939485.jpeg?auto=compress&cs=tinysrgb&w=200&h=200&fit=crop'">
+            <span class="game-status daily">daily</span>
+          </div>
+          <div class="game-info">
+            <h3 class="game-name">Honkai: Star Rail</h3>
+            <p class="game-desc">TL 60 • Cyrene & March enjoyer</p>
+          </div>
+        </div>
+        
+        <!-- Game 3 -->
+        <div class="game-card">
+          <div class="game-img-wrapper">
+            <img src="https://i.pinimg.com/736x/fb/6e/b1/fb6eb1e7da8cb7db65355434717c1983.jpg" alt="Colorful Stage" class="game-img" onerror="this.src='https://images.pexels.com/photos/1939485/pexels-photo-1939485.jpeg?auto=compress&cs=tinysrgb&w=200&h=200&fit=crop'">
+            <span class="game-status casual">casual</span>
+          </div>
+          <div class="game-info">
+            <h3 class="game-name">Colorful Stage</h3>
+            <p class="game-desc">Mizuki Lover • Nightcord</p>
+          </div>
+        </div>
+
+        <!-- Game 4 -->
+        <div class="game-card">
+          <div class="game-img-wrapper">
+            <img src="https://i.pinimg.com/736x/cb/30/ee/cb30ee4b3e54bf7efa3ff7e0e85b82bb.jpg" alt="Valorant" class="game-img" onerror="this.src='https://images.pexels.com/photos/1939485/pexels-photo-1939485.jpeg?auto=compress&cs=tinysrgb&w=200&h=200&fit=crop'">
+            <span class="game-status casual">casual</span>
+          </div>
+          <div class="game-info">
+            <h3 class="game-name">ROBLOX</h3>
+            <p class="game-desc">I love playing horror games with friends</p>
+          </div>
+        </div>
+
+        <!-- Game 5 -->
+        <div class="game-card">
+          <div class="game-img-wrapper">
+            <img src="https://i.pinimg.com/1200x/21/45/b6/2145b668722b120ae48802fdddaace41.jpg" alt="Stardew Valley" class="game-img" onerror="this.src='https://images.pexels.com/photos/1939485/pexels-photo-1939485.jpeg?auto=compress&cs=tinysrgb&w=200&h=200&fit=crop'">
+            <span class="game-status daily">Cozy</span>
+          </div>
+          <div class="game-info">
+            <h3 class="game-name">Stardew Valley</h3>
+            <p class="game-desc">Year 4 farm • Sam </p>
+          </div>
+        </div>
+
+        <!-- Game 6 -->
+        <div class="game-card">
+          <div class="game-img-wrapper">
+            <img src="https://i.pinimg.com/736x/64/4c/81/644c81384d4637feec329ec6f28239db.jpg" alt="ZZZ" class="game-img" onerror="this.src='https://images.pexels.com/photos/1939485/pexels-photo-1939485.jpeg?auto=compress&cs=tinysrgb&w=200&h=200&fit=crop'">
+            <span class="game-status playing">New</span>
+          </div>
+          <div class="game-info">
+            <h3 class="game-name">Zenless Zone Zero</h3>
+            <p class="game-desc">Starter • Loving it so far</p>
+          </div>
+        </div>
+
+        <!-- Game 7 -->
+        <div class="game-card">
+          <div class="game-img-wrapper">
+            <img src="https://i.pinimg.com/736x/2d/a3/37/2da3376edca99f91bd89fd4fbc1ba476.jpg" alt="Animal Crossing" class="game-img" onerror="this.src='https://images.pexels.com/photos/1939485/pexels-photo-1939485.jpeg?auto=compress&cs=tinysrgb&w=200&h=200&fit=crop'">
+            <span class="game-status casual">chill</span>
+          </div>
+          <div class="game-info">
+            <h3 class="game-name">Love and Deepspace</h3>
+            <p class="game-desc">Rafayel Main • Lvl 80</p>
+          </div>
+        </div>
+
+        <!-- Game 8 -->
+        <div class="game-card">
+          <div class="game-img-wrapper">
+            <img src="https://i.pinimg.com/736x/9f/d8/d2/9fd8d2439b492585e62b762cafc67020.jpg" alt="Minecraft" class="game-img" onerror="this.src='https://images.pexels.com/photos/1939485/pexels-photo-1939485.jpeg?auto=compress&cs=tinysrgb&w=200&h=200&fit=crop'">
+            <span class="game-status casual">building</span>
+          </div>
+          <div class="game-info">
+            <h3 class="game-name">Minecraft</h3>
+            <p class="game-desc">cottage builder • modded survival</p>
+          </div>
+        </div>
+      
+      <div class="details-list">
+        <div class="detail-row">
+          <span class="detail-label"><i class="fas fa-gamepad"></i>Other Games: </span>
+          <span class="detail-value">Overwatch, LoL, TFT, Phasmophobia</span>
+        </div>
+        <div class="detail-row">
+          <span class="detail-label"><i class="fas fa-clock"></i> favorite genre</span>
+          <span class="detail-value">RPG & Life Sims</span>
+        </div>
+        <div class="detail-row">
+          <span class="detail-label"><i class="fas fa-crown"></i> all time fave</span>
+          <span class="detail-value">Zelda: Breath of the Wild</span>
+        </div>
+      </div>
+      
+      <div class="fun-fact">
+        <i class="fas fa-sparkle"></i> I'm always down for co-op or play! dm me your UID or user in any social ♡
+      </div>
+    </section>
+
+    <!-- Favorites section -->
+    <section id="faves" class="section-card content-section" data-section="faves">
+      <div class="section-header-wrapper">
+        <h2 class="section-title"><span class="title-deco">﹒</span> Current faves <span class="title-deco">﹒</span></h2>
+        <div class="section-sticker faves-sticker">
+          <img src="https://i.pinimg.com/originals/74/8b/fd/748bfd88c844dead6c90d1c42a7c1bfd.gif" alt="sticker" onerror="this.src='https://images.pexels.com/photos/1939485/pexels-photo-1939485.jpeg?auto=compress&cs=tinysrgb&w=60&h=60&fit=crop'">
+        </div>
+      </div>
+      
+      <div class="section-gif-header">
+        <img src="https://i.pinimg.com/originals/1a/2b/3c/1a2b3c4d5e6f7g8h9i0j1k2l3m4n5o6p.gif" alt="faves gif" class="section-gif" onerror="this.style.display='none'">
+      </div>
+      
+      <div class="faves-container">
+        <div class="fave-chip">🍰 Strawberry shortcake</div>
+        <div class="fave-chip">🩰 Ballet</div>
+        <div class="fave-chip">🧺 Food</div>
+        <div class="fave-chip">📖 'Hidden Love'</div>
+        <div class="fave-chip">🌙 NIKI - Lowkey</div>
+        <div class="fave-chip">🕯️ Vanilla scent</div>
+        <div class="fave-chip">🧸 Chikkawa Plushies</div>
+        <div class="fave-chip">🌸 Cherry blossoms</div>
+        <div class="fave-chip">💌 Handwritten letters</div>
+        <div class="fave-chip">🌷 Crocheting</div>
+      </div>
+    </section>
+
+    <!-- Rules Section -->
+    <section id="rules" class="section-card content-section" data-section="rules">
+      <div class="section-header-wrapper">
+        <h2 class="section-title"><span class="title-deco">﹒</span> my rules <span class="title-deco">﹒</span></h2>
+        <div class="section-sticker rules-sticker">
+          <img src="https://i.pinimg.com/originals/95/b5/a4/95b5a49f5127570e435d8d488d52baa4.gif" alt="sticker" onerror="this.src='https://images.pexels.com/photos/1939485/pexels-photo-1939485.jpeg?auto=compress&cs=tinysrgb&w=60&h=60&fit=crop'">
+        </div>
+      </div>
+      
+      <div class="rules-container">
+        <div class="rule-card">
+          <div class="rule-icon"><i class="fas fa-heart"></i></div>
+          <div class="rule-content">
+            <h3>Be Kind & Respectful</h3>
+            <p>Please be nice to everyone! No hate speech, bullying, or drama. This is a safe space.</p>
+          </div>
+        </div>
+        
+        <div class="rule-card">
+          <div class="rule-icon"><i class="fas fa-ban"></i></div>
+          <div class="rule-content">
+            <h3>DNI If...</h3>
+            <p> Under 13, Racist, homophobic, transphobic, or generally hateful. Basic DNI criteria apply.</p>
+          </div>
+        </div>
+        
+        <div class="rule-card">
+          <div class="rule-icon"><i class="fas fa-star"></i></div>
+          <div class="rule-content">
+            <h3>Don't take me too seriously</h3>
+            <p>Don't ever as in EVER take what I said by heart or seriously. If I did offend you in anyway and made you uncomfy feel free to tell me. ♡</p>
+          </div>
+        </div>
+        
+        <div class="rule-card">
+          <div class="rule-icon"><i class="fas fa-comment"></i></div>
+          <div class="rule-content">
+            <h3>Interaction</h3>
+            <p>Feel free to DM me but please be patient! I may not respond even if I'm on due to me doing something else or just busy. </p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="fun-fact">
+        <i class="fas fa-sparkle"></i> Thanks for reading my rules! let's be mutuals ♡
+      </div>
+    </section>
+
+    <!-- Friends Section -->
+    <section id="friends" class="section-card content-section" data-section="friends">
+      <div class="section-header-wrapper">
+        <h2 class="section-title"><span class="title-deco">﹒</span> My goats <span class="title-deco">﹒</span></h2>
+        <div class="section-sticker friends-sticker">
+          <img src="https://i.pinimg.com/originals/0a/ce/2a/0ace2a84df7bce8d228bb115b57b7a5f.gif" alt="sticker" onerror="this.src='https://images.pexels.com/photos/1939485/pexels-photo-1939485.jpeg?auto=compress&cs=tinysrgb&w=60&h=60&fit=crop'">
+        </div>
+      </div>
+      
+      <div class="friends-container">
+        <div class="friend-card">
+          <img src="https://i.pinimg.com/736x/e3/9f/d0/e39fd0dffe6de7660552603265e3115c.jpg" alt="friend" class="friend-pic" onerror="this.src='https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=80&h=80&fit=crop'">
+          <div class="friend-info">
+            <h3>Song</h3>
+            <p>Heh I love this dude more than he loves me</p>
+          </div>
+        </div>
+        
+        <div class="friend-card">
+          <img src="https://i.pinimg.com/736x/68/17/a9/6817a9a41318c9c3f1d502c8d1fa54cd.jpg" alt="friend" class="friend-pic" onerror="this.src='https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=80&h=80&fit=crop'">
+          <div class="friend-info">
+            <h3>March</h3>
+            <p>I LOVE HER SO MUCH EHEHEHEHHEEHEHHE</p>
+          </div>
+        </div>
+        
+        <div class="friend-card">
+          <img src="https://i.pinimg.com/736x/ba/5f/6e/ba5f6ef47b84ad34643c96c27d59c6dc.jpg" alt="friend" class="friend-pic" onerror="this.src='https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=80&h=80&fit=crop'">
+          <div class="friend-info">
+            <h3>Xiu</h3>
+            <p>Best companion at all time like HIGHKEY, Hsr teacher</p>
+          </div>
+        </div>
+        
+        <div class="friend-card">
+          <img src="https://i.pinimg.com/736x/c5/34/13/c53413a203e480ddd11c874b9ec9f9a1.jpg" alt="friend" class="friend-pic" onerror="this.src='https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=80&h=80&fit=crop'">
+          <div class="friend-info">
+            <h3>Val</h3>
+            <p>THE goat gng I love her</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="fun-fact">
+        <i class="fas fa-sparkle"></i> Ilovemygoats, let's be friends too ♡ (DM if I forgot to add u)
+      </div>
+    </section>
+
+    <!-- Connect / social section (Always Visible) -->
+    <section id="connect" class="section-card connect-section">
+      <div class="section-header-wrapper">
+        <h2 class="section-title"><span class="title-deco">﹒</span> let's be friends <span class="title-deco">﹒</span></h2>
+        <div class="section-sticker connect-sticker">
+          <img src="https://i.pinimg.com/736x/3c/28/3e/3c283e7d527432c5abb671484e1ebfa2.jpg" alt="sticker" onerror="this.src='https://images.pexels.com/photos/1939485/pexels-photo-1939485.jpeg?auto=compress&cs=tinysrgb&w=60&h=60&fit=crop'">
+        </div>
+      </div>
+      <div class="social-links">
+        <!-- INSTAGRAM LINK - Replace the # with your Instagram URL -->
+        <a href="https://www.instagram.com/yukinurheart._/" class="social-link" aria-label="instagram" target="_blank"><i class="fab fa-instagram"></i> @Yukinurheart._</a>
+        <!-- PINTEREST LINK - Replace the # with your Pinterest URL -->
+        <a href="#" class="social-link" aria-label="pinterest" target="_blank"><i class="fab fa-discord"></i> .miyukiss</a>
+        <a href="https://open.spotify.com/user/2bl64ewfacg7y6wbpeef6qy7y?si=14cf16a84e944a4d" class="social-link" aria-label="spotify" target="_blank"><i class="fab fa-spotify"></i> miyu ⋆｡°✩</a>
+        <!-- EMAIL - Replace the # with your email (mailto:youremail@example.com) -->
+        <a href="#" class="social-link" aria-label="tiktok"><i class="fab fa-tiktok"></i> eliayayaya_</a>
+      </div>
+
+  <!-- JavaScript File -->
+  <script src="script.js"></script>
+</body>
+</html>
