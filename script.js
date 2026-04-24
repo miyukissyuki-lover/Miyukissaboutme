@@ -9,6 +9,9 @@
   const contentSections = document.querySelectorAll('.content-section');
   const profileSection = document.getElementById('profile');
   
+  // Track which sections have already been animated
+  const animatedSections = new Set();
+  
   // Create audio element for ting sound
   const tingSound = new Audio('data:audio/wav;base64,UklGRlwAAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YVoAAACAgICAf39/f39/f39/f3+AgICAf39/f39/f39/f3+AgICAf39/f39/f39/f3+AgICAf39/f39/f39/f3+AgICAf39/f39/f39/f38=');
   tingSound.volume = 0.3;
@@ -50,6 +53,21 @@
   // Initialize - show modal
   showModal();
 
+  // Trigger fade animation once on a section
+  function animateSectionOnce(section) {
+    if (!animatedSections.has(section)) {
+      section.style.animation = 'none';
+      section.offsetHeight; // Force reflow
+      section.style.animation = 'fadeUp 0.6s ease-out forwards';
+      animatedSections.add(section);
+      
+      // Remove animation after it completes so it doesn't loop
+      section.addEventListener('animationend', function() {
+        section.style.animation = 'none';
+      }, { once: true });
+    }
+  }
+
   // Navigation filtering - show only selected section
   function filterSection(sectionName) {
     // Sections that should hide the profile
@@ -60,6 +78,8 @@
       profileSection.classList.add('profile-hidden');
     } else {
       profileSection.classList.remove('profile-hidden');
+      // Animate profile when it reappears
+      animateSectionOnce(profileSection);
     }
     
     // Filter content sections
@@ -67,20 +87,18 @@
       const sectionType = section.getAttribute('data-section');
       if (sectionType === sectionName) {
         section.classList.remove('hidden');
-        section.style.animation = 'none';
-        section.offsetHeight;
-        section.style.animation = 'fadeUp 0.6s ease-out';
+        // Only animate if it hasn't been animated yet
+        animateSectionOnce(section);
       } else {
         section.classList.add('hidden');
       }
     });
-  }
-
-  // Scroll to section smoothly
-  function scrollToSection(sectionName) {
-    const targetSection = document.getElementById(sectionName);
-    if (targetSection) {
-      targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    
+    // Reset animation tracking for the active section so it plays again when switching to it
+    const activeSection = document.querySelector(`[data-section="${sectionName}"]`);
+    if (activeSection && animatedSections.has(activeSection)) {
+      animatedSections.delete(activeSection);
+      animateSectionOnce(activeSection);
     }
   }
 
@@ -111,7 +129,7 @@
     });
   });
 
-  // Scroll animations - fade up sections as they come into view
+  // Scroll animations - fade up sections as they come into view (ONLY ONCE)
   const observerOptions = {
     threshold: 0.15,
     rootMargin: '0px 0px -50px 0px'
@@ -119,14 +137,15 @@
 
   const fadeObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.style.animation = 'none';
-        entry.target.offsetHeight;
-        entry.target.style.animation = 'fadeUp 0.6s ease-out';
+      if (entry.isIntersecting && !animatedSections.has(entry.target)) {
+        animateSectionOnce(entry.target);
+        // Stop observing after animation plays once
+        fadeObserver.unobserve(entry.target);
       }
     });
   }, observerOptions);
 
+  // Observe all section cards for scroll animation
   document.querySelectorAll('.section-card').forEach(card => {
     fadeObserver.observe(card);
   });
@@ -167,19 +186,6 @@
   // Smooth reveal on load
   window.addEventListener('load', () => {
     body.classList.add('content-visible');
-  });
-
-  // Re-trigger animations on resize
-  let resizeTimer;
-  window.addEventListener('resize', () => {
-    clearTimeout(resizeTimer);
-    resizeTimer = setTimeout(() => {
-      document.querySelectorAll('.section-card').forEach(card => {
-        card.style.animation = 'none';
-        card.offsetHeight;
-        card.style.animation = 'fadeUp 0.6s ease-out';
-      });
-    }, 100);
   });
 
 })();
